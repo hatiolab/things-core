@@ -13,6 +13,10 @@ class InfographicsController < ResourceMultiUpdateController
 
     if @infographic.nil?
       # raise Exception.new('Infographic is not configured for requested entity yet.')
+      respond_to do |format|
+        format.xml  { render :xml => {:success => false, :msg => 'Infographic is not configured for requested entity yet.'} }
+        format.json { render :json => {:success => false, :msg => 'Infographic is not configured for requested entity yet.'} }
+      end
     else
       render :show_diagram
     end
