@@ -12,7 +12,7 @@ class InfographicsController < ResourceMultiUpdateController
     end
 
     if @infographic.nil?
-      raise Exception.new('Infographic is not configured for requested entity yet.')
+      # raise Exception.new('Infographic is not configured for requested entity yet.')
     else
       render :show_diagram
     end
