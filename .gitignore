@@ -26,3 +26,5 @@ Gemfile.lock
 public/assets/
 
 .ruby-version
+
+db/schema.rb
