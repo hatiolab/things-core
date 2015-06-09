@@ -19,8 +19,6 @@ development:
   encoding: unicode
   database: trackvue_development
   pool: 5
-  username: postgres
-  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,8 +55,6 @@ test:
   encoding: unicode
   database: trackvue_test
   pool: 5
-  username: postgres
-  password: postgres
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,5 +80,3 @@ production:
   encoding: unicode
   database: trackvue
   pool: 5
-  username: postgres
-  password: postgres
