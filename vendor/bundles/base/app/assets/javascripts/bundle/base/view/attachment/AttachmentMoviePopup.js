@@ -57,7 +57,7 @@ Ext.define('Base.view.attachment.AttachmentMoviePopup', {
 		var video = videoBox.getEl().down('.video').dom;
 		video.play();
 	},
-		
+	
 	dockedItems: [ {
 		xtype: 'controlbar',
 		items: ['->', 'close']

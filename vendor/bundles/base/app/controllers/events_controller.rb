@@ -3,7 +3,7 @@ class EventsController < ActionController::Base
 public
   def index
     skip = (params[:page].to_i - 1) * params[:limit].to_i
-    @collection = Event.skip(skip).order_by(:id => 'desc').limit(params[:limit].to_i)
+    @collection = Event.order('id desc').skip(skip).order_by(:id => 'desc').limit(params[:limit].to_i)
     @total_count = Event.count
     
     respond_to do |format|

@@ -10,15 +10,48 @@ Ext.define('Base.view.track.Track', {
 	
 	columns : [
 		//{ header : '#', xtype : 'rownumberer', dataIndex : 'id' },
-		{ header : T('label.id'), dataIndex : 'id', width : 150 },
-		{ header : T('label.cid'), dataIndex : 'cid' , editor : { xtype : 'textfield' , maxLength : 16 } },
-		{ header : T('label.fid'), dataIndex : 'fid' , editor : { xtype : 'textfield' , maxLength : 16 } },
-		{ header : T('label.fvr'), dataIndex : 'fvr' , editor : { xtype : 'textfield' , maxLength : 16 } },
-		{ header : T('label.tid'), dataIndex : 'tid' , editor : { xtype : 'textfield' , maxLength : 16 } },
-		{ header : T('label.did'), dataIndex : 'did' , editor : { xtype : 'textfield' , maxLength : 16 } },
-		{ header : T('label.stm'), dataIndex : 'stm' , editor : { xtype : 'textfield' , maxLength : 32 } },
-		{ header : T('label.ttm'), dataIndex : 'ttm' , editor : { xtype : 'textfield' , maxLength : 32 } },
-		{ header : T('label.ctm'), dataIndex : 'ctm' , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.id'), dataIndex : 'id', width : 180, editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.cid'), dataIndex : 'cid', width : 85 , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.fid'), dataIndex : 'fid' , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.fvr'), dataIndex : 'fvr' , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.tid'), dataIndex : 'tid', width : 180 , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ header : T('label.did'), dataIndex : 'did' , editor : { xtype : 'textfield' , maxLength : 32 } },
+		{ 
+			header : T('label.stm'), 
+			dataIndex : 'stm', 
+			width : 195 , 
+			renderer : function(val) {
+				if(val) {
+					return Ext.Date.format(new Date(val), 'Y-m-d H:i:sO');
+				} else {
+					return val;
+				}
+			}
+		},
+		{ 
+			header : T('label.ttm'), 
+			dataIndex : 'ttm', 
+			width : 195,
+			renderer : function(val) {
+				if(val) {
+					return Ext.Date.format(new Date(val), 'Y-m-d H:i:sO');
+				} else {
+					return val;
+				}
+			}
+		},
+		{ 
+			header : T('label.ctm'), 
+			dataIndex : 'ctm', 
+			width : 195 ,
+			renderer : function(val) {
+				if(val) {
+					return Ext.Date.format(new Date(val), 'Y-m-d H:i:sO');
+				} else {
+					return val;
+				}
+			}
+		},
 		{ header : T('label.kct'), dataIndex : 'kct', align : 'right' , editor : { xtype : 'numberfield' } },
 		{ header : T('label.vlc'), dataIndex : 'vlc', align : 'right' , editor : { xtype : 'numberfield' } },
 		{ header : T('label.a_vlc'), dataIndex : 'a_vlc', align : 'right' , editor : { xtype : 'numberfield' } },
@@ -30,8 +63,10 @@ Ext.define('Base.view.track.Track', {
 		{ header : T('label.gx'), dataIndex : 'gx', align : 'right' , editor : { xtype : 'numberfield' } },
 		{ header : T('label.gy'), dataIndex : 'gy', align : 'right' , editor : { xtype : 'numberfield' } },
 		{ header : T('label.gz'), dataIndex : 'gz', align : 'right' , editor : { xtype : 'numberfield' } },
-		{ header : T('label.f_img'), dataIndex : 'f_img' , editor : { xtype : 'textfield' , maxLength : 255 } },
-		{ header : T('label.r_img'), dataIndex : 'r_img' , editor : { xtype : 'textfield' , maxLength : 255 } },
+		{ xtype: 'actioncolumn', icon: 'assets/std/iconSlideshow.png', itemId : 'fimgshow', width : 30, align : 'center' },
+		{ header : T('label.f_img'), dataIndex : 'f_img', width : 350 , editor : { xtype : 'textfield' , maxLength : 255 } },
+		{ xtype: 'actioncolumn', icon: 'assets/std/iconSlideshow.png', itemId : 'rimgshow', width : 30, align : 'center' },
+		{ header : T('label.r_img'), dataIndex : 'r_img', width : 350 , editor : { xtype : 'textfield' , maxLength : 255 } },
 	],	
 	
 	dockedItems : [ {
@@ -51,6 +86,6 @@ Ext.define('Base.view.track.Track', {
 		}]
 	}, {
 		xtype : 'controlbar',
-		items : ['->', 'import', 'export', 'add', 'save', 'delete']
+		items : [/*'->', 'import', 'export', 'add', 'save', 'delete'*/]
 	} ]
 });

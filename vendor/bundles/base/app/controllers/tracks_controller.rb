@@ -3,7 +3,7 @@ class TracksController < ActionController::Base
   public
   def index
     skip = (params[:page].to_i - 1) * params[:limit].to_i
-    @collection = Track.skip(skip).limit(params[:limit].to_i)
+    @collection = Track.order('id desc').skip(skip).limit(params[:limit].to_i)
     @total_count = Track.count
     
     respond_to do |format|
