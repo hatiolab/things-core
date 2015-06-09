@@ -17,10 +17,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: trackvue_development
+  database: caffeine_development
   pool: 5
-  username: postgres
-  password: postgres
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   template: template0
 
   # The specified database role being used to connect to postgres.
@@ -56,10 +56,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: trackvue_test
+  database: caffeine_test
   pool: 5
-  username: postgres
-  password: postgres
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   template: template0
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -84,8 +84,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: trackvue
+  database: caffeine_production
   pool: 5
-  username: postgres
-  password: postgres
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
   template: template0
