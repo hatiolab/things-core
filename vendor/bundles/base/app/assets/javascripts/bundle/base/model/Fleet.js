@@ -23,7 +23,7 @@ Ext.define('Base.model.Fleet', {
 		{ name : 'status', type : 'string' },
 		{ name : 'trip_id', type : 'string' },
 		{ name : 'last_trip_seq', type : 'integer' },
-		{ name : 'last_trip_updated', type : 'decimal' },
+		{ name : 'last_trip_updated', type : 'date' },
 		{ name : 'creator_id', type : 'string' },
 		{ name : 'creator', type : 'auto' },
 		{ name : 'created_at', type : 'date' },

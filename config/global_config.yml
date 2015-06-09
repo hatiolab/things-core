@@ -15,4 +15,4 @@ shift_time_format: '%H:%M'
 std_name : std
 ops_name : ops
 to_date_db_func : date
-content_base_url : http://127.0.0.1:3000/
+content_base_url : http://104.131.91.143:3000/

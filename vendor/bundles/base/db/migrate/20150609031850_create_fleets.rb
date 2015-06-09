@@ -21,7 +21,7 @@ class CreateFleets < ActiveRecord::Migration
 			t.string :status, :null => false
 			t.string :trip_id, :limit => 32
 			t.integer :last_trip_seq
-			t.decimal :last_trip_updated
+			t.date :last_trip_updated
 			t.userstamps
 			t.timestamps
 		end

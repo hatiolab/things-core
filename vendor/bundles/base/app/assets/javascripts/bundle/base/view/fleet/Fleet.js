@@ -29,18 +29,7 @@ Ext.define('Base.view.fleet.Fleet', {
 		{ header : T('label.status'), dataIndex : 'status' , editor : { xtype : 'textfield' , maxLength : 10 } },
 		{ header : T('label.trip_id'), dataIndex : 'trip_id' , editor : { xtype : 'textfield' , maxLength : 10 } },
 		{ header : T('label.last_trip_seq'), dataIndex : 'last_trip_seq' , editor : { xtype : 'numberfield' } },
-		{ 
-			header : T('label.last_trip_updated'), 
-			dataIndex : 'last_trip_updated' , 
-			editor : { xtype : 'numberfield' },
-			renderer : function(val) {
-				if(val) {
-					return Ext.Date.format(new Date(val), 'Y-m-d H:i:sO');
-				} else {
-					return val;
-				}
-			}
-		}
+		{ header : T('label.last_trip_updated'), dataIndex : 'last_trip_updated' }
 	],	
 	
 	dockedItems : [ {

@@ -53,6 +53,8 @@ Please feel free to use a different markup language if you do not plan to run
 7. run server (default port 3000)
 		<tt>rails s</tt>
 		<tt>rails s -p 80 -e production</tt>
+		
+   linux : nohup bundle exec unicorn -E production -c config/unicorn.rb &
 
 8. site URL (/etc/hosts 파일에 system.vzionsys.com 호스트를 127.0.0.1로 등록하고 접속함.)
 		<tt>http://system.vzionsys.com:3000</tt>
