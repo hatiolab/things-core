@@ -21,7 +21,7 @@ development:
   pool: 5
   username: postgres
   password: postgres
-  template: template0
+  template: template1
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,7 +60,7 @@ test:
   pool: 5
   username: postgres
   password: postgres
-  template: template0
+  template: template1
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -88,4 +88,4 @@ production:
   pool: 5
   username: postgres
   password: postgres
-  template: template0
+  template: template1
