@@ -53,7 +53,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: trackvue_test
+  database: trackvue_development
   pool: 5
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -78,5 +78,5 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: trackvue
+  database: trackvue_development
   pool: 5
